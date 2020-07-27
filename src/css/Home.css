@@ -1,5 +1,5 @@
-.olib {
-  width: 100vw;
-  height: 100vh;
-  background-color: #090605;
+.olib__container {
+  /* background-image: -webkit-linear-gradient(#d1a46b, #b57744); */
+  background-color: #b57744;
+  flex: 1;
 }

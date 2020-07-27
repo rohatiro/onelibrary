@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import logo from "../../assets/Books.png";
 
 import "../../css/Header.css";
@@ -6,14 +7,14 @@ import "../../css/Header.css";
 const Header = (props) => {
   return (
     <div className="navbar navbar-expand-lg navbar-dark">
-      <a href="#" className="navbar-brand">
+      <Link className="navbar-brand" to="/">
         <img
           src={logo}
           alt="One Library Logo"
           className="img-fluid"
           width={100}
         />
-      </a>
+      </Link>
       <button
         className="navbar-toggler"
         type="button"
@@ -28,14 +29,14 @@ const Header = (props) => {
       <div id="navbarNav" className="collapse navbar-collapse">
         <ul className="navbar-nav">
           <li className="nav-item">
-            <a href="" className="nav-link active">
+            <Link to="/" className="nav-link active">
               Explorar
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
-            <a href="" className="nav-link">
+            <Link to="/mycollection" className="nav-link">
               Mi Colección
-            </a>
+            </Link>
           </li>
         </ul>
       </div>

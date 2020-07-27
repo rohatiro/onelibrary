@@ -1,6 +1,6 @@
 .olib .navbar {
   /* background-color: #3d2214; */
-  background-image: -webkit-radial-gradient(#d1a46b, #b57744);
+  background-image: -webkit-linear-gradient(#d1a46b, #b57744);
 }
 
 .olib .navbar .nav-tabs .nav-link.active {
