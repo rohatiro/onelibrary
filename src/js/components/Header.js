@@ -6,7 +6,7 @@ import "../../css/Header.css";
 
 const Header = (props) => {
   return (
-    <div className="navbar navbar-expand-lg navbar-dark">
+    <div className="navbar navbar-expand-lg navbar-dark shadow">
       <Link className="navbar-brand" to="/">
         <img
           src={logo}

@@ -12,7 +12,7 @@ import "bootstrap";
 const App = () => {
   return (
     <BrowserRouter>
-      <div className="olib">
+      <div className="olib overflow-auto">
         <Header />
         <div className="olib__container container">
           <Switch>

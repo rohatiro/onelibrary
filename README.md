@@ -11,3 +11,13 @@ Este es un mini-proyecto para probar mis conocimientos con React y Webpack.
 ## Instrucciones para probar en modo de producción
 
 _(En proceso)_
+
+## Funcionamiento
+
+_(En proceso)_
+
+### Servidor API de desarrollo
+
+Para poder probar el manejo de un API en React decidí que utilizaría `json-server` ya que es muy sencillo de configurar. Solo debo configurar un archivo json que servira para manejar la información en el API y definir datos iniciales para probar.
+
+En este caso el archivo que se utiliza para manejar la información en el API se encuentra en `/server/db.json`.
