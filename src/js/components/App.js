@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Header from "../components/Header";
 import Home from "../pages/Home";
+import BookDetails from "../pages/BookDetails";
 import NotFound from "../pages/NotFound";
 
 import "bootstrap/dist/css/bootstrap.css";
@@ -15,10 +16,14 @@ const App = () => {
       <div className="olib overflow-auto">
         <Header />
         <div className="olib__container container">
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route component={NotFound} />
-          </Switch>
+          <div className="row">
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route exact path="/books" component={Home} />
+              <Route exact path="/books/:bookid" component={BookDetails} />
+              <Route component={NotFound} />
+            </Switch>
+          </div>
         </div>
       </div>
     </BrowserRouter>

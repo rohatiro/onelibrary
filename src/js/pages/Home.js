@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "../../css/Home.css";
 
 const Home = () => {
@@ -16,28 +17,26 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="container">
-      <div className="row">
-        <div className="col-12 d-flex flex-wrap py-2">
-          {data.map((item) => {
-            return (
-              <div key={item.id} className="card olib__book flex-row">
-                <div className="card-header card-header-left border-0">
-                  <img
-                    src={item.thumbnail}
-                    alt={item.title}
-                    className="card-img"
-                  />
-                </div>
-                <div className="card-body">
-                  <h5 className="card-title">{item.title}</h5>
-                  <h6 className="card-subtitle">{item.author}</h6>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      </div>
+    <div className="col-12 d-flex flex-wrap py-2">
+      {data.map((item) => {
+        return (
+          <Link
+            key={item.id}
+            className="card olib__book flex-row text-body text-decoration-none"
+            to={`/books/${item.id}`}
+          >
+            <div className="card-header card-header-left border-0">
+              <img src={item.thumbnail} alt={item.title} className="card-img" />
+            </div>
+            <div className="card-body">
+              <h5 className="card-title">{item.title}</h5>
+              <h6 className="card-subtitle">{item.author}</h6>
+            </div>
+            {/* <div key={item.id} className="card olib__book flex-row">
+                </div> */}
+          </Link>
+        );
+      })}
     </div>
   );
 };
